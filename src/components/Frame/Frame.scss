@@ -1,0 +1,67 @@
+.app__frame {
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: 300;
+    height:100%;
+    width:100%;
+    pointer-events: none;
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: calc(100% - 40px);
+        height: calc(100% - 95px);
+        border-radius: 0;
+        border: 25px solid var(--primary-color);
+        border-top: 10px solid var(--primary-color);
+        transition-property: border-color;
+        transition-duration: .2s;
+        transition-timing-function: ease-in-out;
+        top: calc(50% + 30px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        @media screen and (max-width: 450px){
+            z-index:300;
+            height: calc(100% - 18px);
+            width: calc(100% - 15px);
+            top: 50%;
+            border-top:4px solid var(--primary-color);
+            border: 10px solid var(--primary-color);
+           // border: 20px solid var(--primary-color);
+        }
+    }
+
+    .app__frame-inverse{
+        position: absolute;
+        z-index:299;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 70px);
+        border-radius: 50px;
+        border: 20px solid var(--primary-color);
+        -webkit-transition-property: var(--primary-color);
+        transition-property: var(--primary-color);
+        -webkit-transition-duration: .2s;
+        transition-duration: .2s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+
+        @media screen and (max-width: 450px){
+            border: 15px solid var(--primary-color);
+            border-radius: 30px;
+            height: calc(100%);
+            top: 0;
+        }
+
+
+    }
+}
+
+

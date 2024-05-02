@@ -1,0 +1,62 @@
+
+$animation-timing-function: ease-in-out;
+
+@mixin animation($name, $animation-duration) {
+  animation: $name $animation-duration $animation-timing-function;
+}
+
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+div.entry{
+   display:none;
+
+   @media screen and (max-width: 400px){
+    text-align: center;
+   }
+
+   h2 {
+    font-size:1.5rem;
+   }
+
+   h3 {
+    font-weight:500;
+    padding-top:7px;
+   }
+
+   h4 {
+    font-weight: 400;
+    line-height: 1.5;
+    }
+    h4:nth-of-type(1) {
+        margin-top: 20px;
+    }
+  &.active {
+    display:block;
+    h2{
+        display: block;
+        @include animation(slideIn, 0.5s);
+    }
+    h3{
+        display: block;
+        @include animation(slideIn, 1s);
+    }
+
+    h4 {
+        display: block;
+        @include animation(slideIn, 1.7s);
+    }
+    
+  }
+}

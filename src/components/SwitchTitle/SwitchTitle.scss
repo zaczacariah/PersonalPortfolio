@@ -1,0 +1,41 @@
+$animation-timing-function: ease-in-out;
+
+@mixin animation($name, $animation-duration) {
+  animation: $name $animation-duration $animation-timing-function;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+}
+
+.entryTitle {
+  display:none;
+  text-align: center;
+  &.active {
+    display:block;
+    @include animation(slideIn, 1s);
+  }
+  
+  &:not(.active) {
+    @include animation(slideOut, 1s);
+    
+  }
+}
