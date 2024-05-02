@@ -1,0 +1,30 @@
+@import url("https://use.typekit.net/ens1dsx.css");
+
+:root {
+  --font-base: 'Korolev', sans-serif;
+  --font-secondary: 'Paralucent', sans-serif;
+
+  --primary-color: #cac3f9;
+  --secondary-color: #0d0e4d;
+  --black-color: #030303;
+  --highlight-color: #0d0e68;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+
+  /* @media screen and (max-width:450px){
+    scroll-snap-type: none;
+  } */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
