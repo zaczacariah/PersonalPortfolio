@@ -1,4 +1,4 @@
-export {default as Navbar} from './Navbar/Navbar';
+export {default as Header} from './Header/Header';
 export {default as Frame } from './Frame/Frame';
 export {default as SwitchText } from './SwitchText/SwitchText.jsx';
 export {default as SwitchInfo } from './SwitchInfo/SwitchInfo.jsx';

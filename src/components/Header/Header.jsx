@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.scss';
+import './Header.scss';
 import {images} from '../../constants';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { SwitchText } from '../../components';
+import { SwitchText } from '..';
 
-const Navbar = () => {
+const Header = () => {
     const [toggle, setToggle] = useState(false);
    return (
     <nav className='app__navbar'>
@@ -58,4 +58,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Header
