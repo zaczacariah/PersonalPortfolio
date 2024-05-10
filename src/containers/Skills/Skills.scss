@@ -1,0 +1,105 @@
+.app__skills{
+    width:100%;
+    height:100vh;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: linear-gradient(var(--secondary-color), var(--highlight-color));
+    //background: url(../../assets/header_overlay.png);
+    object-fit: cover;
+    background-repeat: repeat;
+    background-size: 1500px 1000px;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+
+    @media screen and (max-width: 669px){
+        height:100%;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size:2rem;
+        color: var(--white-color);
+        
+        @media screen and (max-width: 669px){
+            padding-bottom:30px;
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-evenly;
+        align-items: center;
+        margin-top: 0px;
+        max-width: 1200px;
+        width:100%;
+        height:100%;
+        //max-height:calc(100vh - 200px);
+        border-radius:20px;
+        overflow: visible;
+        gap:10px;
+
+        @media  screen and (max-width:900px) {
+            flex-direction: row;
+            align-content: space-evenly;
+
+        }
+
+        .app__skills-item {
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex: 1;
+            gap:0;
+            max-width:300px;
+            height:350px;
+            background: var(--primary-color);
+            border-radius: 20px;;
+            padding:20px;
+
+            @media screen and (max-width:900px){
+                height:300px;
+                padding:15px;
+                flex-basis: calc(100% * 0.3);
+                //width: calc(100% * 0.4);
+                //height:fit-content;
+                // flex-direction: row;
+                gap:0;
+                margin:0;
+            }
+
+            @media screen and (max-width: 400px){
+                height:250px;
+                flex-basis: 100%;
+            }
+
+            img {
+                width:100%;
+                height:170px;
+                border-radius: inherit;
+                object-fit: cover;
+
+                @media screen and (max-width:900px){
+                    height:150px;
+                }
+            }
+
+            h2 {
+                margin:0;
+                
+            }
+
+        }
+    }
+
+
+    transition: all 0.5s ease-in-out;
+}
