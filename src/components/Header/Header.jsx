@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import './Header.scss';
 import {images} from '../../constants';
 import { motion } from 'framer-motion';
@@ -9,7 +9,7 @@ import { SwitchText } from '..';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-    
+
    return (
     <nav className='app__navbar'>
         <div className='app__navbar-logo'>
