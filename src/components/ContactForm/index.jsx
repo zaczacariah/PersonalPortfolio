@@ -7,7 +7,7 @@ const ContactForm = () => {
 
     }
   return (
-    <div class="app__flex">
+    <div className="app__flex">
         <h4>Get in contact with me!</h4>
         <form onSubmit={formHandler}>
             <label htmlFor="">Name</label>

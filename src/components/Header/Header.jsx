@@ -1,12 +1,15 @@
 import React, { useState} from 'react';
+import { Link, useLocation  } from 'react-router-dom';
 import './Header.scss';
 import {images} from '../../constants';
 import { motion } from 'framer-motion';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { SwitchText } from '..';
 
+
 const Header = () => {
     const [toggle, setToggle] = useState(false);
+    
    return (
     <nav className='app__navbar'>
         <div className='app__navbar-logo'>
@@ -18,19 +21,18 @@ const Header = () => {
                   interval={5000}
                   className="app__navbar-logo-h1"
                 />
-            
+
             
         </div>
         <ul className='app__navbar-links'>
             {['home', 'skills', 'work'].map((item) => (
                 <li className="app__flex p-text" key={`link-${item}`}>
-                    <div />
-                    <a href={`/#${item}`} className="">{item}</a>
+                 
+                    <a href={`/#${item}`}>{item}</a>
                 </li>
             ))}
             <li className="app__flex p-text">
-                    <div />
-                    <a href={`/contact`} className="">Contact</a>
+                    <Link to={`/contact`} className="">Contact</Link>
                 </li>
         </ul>
 
