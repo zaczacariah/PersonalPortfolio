@@ -58,10 +58,7 @@ const Skills = () => {
 
   }, []);
 
-  function staggerChildCustom(numElements, index) {
-    let increment = (4 - 0.5) / (numElements - 1);
-    return 0.5 + (index * increment);
-  }
+
 
   return (
     <section className="app__skills">

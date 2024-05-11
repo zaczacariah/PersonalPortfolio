@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './Header.scss';
 import {images} from '../../constants';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { SwitchText } from '..';
 
