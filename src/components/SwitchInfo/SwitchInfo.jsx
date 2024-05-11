@@ -3,7 +3,8 @@ import './SwitchInfo.scss';
 
 const SwitchInfo = ({ entries }) => {
   const [currentEntryIndex, setCurrentEntryIndex] = useState(0);
-
+  
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentEntryIndex((prevIndex) => (prevIndex + 1) % entries.length);
