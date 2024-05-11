@@ -6,3 +6,4 @@ export {default as SwitchTitle } from './SwitchTitle/SwitchTitle.jsx';
 export {default as NavigationDots } from './NavigationDots.jsx';
 export {default as SocialMedia } from './SocialMedia.jsx';
 export {default as Hero } from './Hero/Hero.jsx';
+export {default as ContactForm } from './ContactForm'

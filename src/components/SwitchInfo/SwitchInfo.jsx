@@ -21,9 +21,9 @@ const SwitchInfo = ({ entries }) => {
         >
           <h2>{entry.title}</h2>
           <h3> {entry.head}</h3>
-          {entry.subtitles.map((subtitle, subtitleIndex) => (
+          {/* {entry.subtitles.map((subtitle, subtitleIndex) => (
             <h4 key={subtitleIndex}>{subtitle}</h4>
-          ))}
+          ))} */}
         </div>
       ))}
     </>

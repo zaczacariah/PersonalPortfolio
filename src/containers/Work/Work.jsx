@@ -50,14 +50,48 @@ const Work = () => {
         name: "NetworkEQ is a basic headless social network platform built using Mongodb, mongoose and node.js.",
         title: "NetworkEQ",
         description: "NetworkEQ is a basic headless social network platform built using Mongodb, mongoose and node.js",
-        tags: ["NodeJs", "MongoDB", "Mongoose", "API"],
+        tags: ["NodeJs", "MongoDB", "Mongoose"],
         src: images.networkeq,
         codeLink: "https://github.com/zaczacariah/NetworkEQ"
+      },
+      {
+        name: "Stamp Duty Calculator built for Keylaw Conveyancing using Jquery.",
+        title: "Keylaw StampDuty Calculator",
+        description: "Stamp Duty Calculator built for Keylaw Conveyancing using Jquery.",
+        tags: ["jQuery", "Wordpress"],
+        src: images.keylaw,
+        projectLink: "https://weswift.com.au/www.keylaw.com.au/stamp-duty-calculator"
+      },
+      {
+        name: "Stamp Duty Calculator built for Keylaw Conveyancing using Jquery.",
+        title: "Keylaw CGT Calculator",
+        description: "Capital Gains Tax Calculator built for Keylaw Conveyancing using Jquery.",
+        tags: ["jQuery", "Wordpress"],
+        src: images.keylaw,
+        projectLink: "https://keylaw.com.au/cgt-calculator/"
+      },
+      {
+        name: "Ecommy is an ecommerce backend built to store all of aspects of a ecommerce site including products, prices, categories, and tags. It's ready for you to connect your front end and go!",
+        title: "Ecommy",
+        description: "Ecommy is an ecommerce backend built to store all of aspects of a ecommerce site including products, prices, categories, and tags. It's ready for you to connect your front end and go!",
+        tags: ["jQuery", "Wordpress"],
+        src: images.ecommy,
+        codeLink: 'https://github.com/zaczacariah/ecommy',
+        projectLink: "https://youtu.be/jmhQvJhmzP8"
+      },
+      {
+        name: "NoteRiot is a task taking app that allows you to record your notes via the webbrowser. It will retain your tasks when navigating away from the page and includes all basic note taking funcitonality.",
+        title: "NoteRiot",
+        description: "NoteRiot is a task taking app that allows you to record your notes via the webbrowser. It will retain your tasks when navigating away from the page and includes all basic note taking funcitonality.",
+        tags: ["Node"],
+        src: images.noteriot,
+        codeLink: 'https://github.com/zaczacariah/NoteRiot',
+        projectLink: "https://noteriot-737fd22d7ff2.herokuapp.com/notes"
       }
     ]
 
       setWorks(data);
-      setFilterWork(data);  //data.slice(0, 4) to get 4 pages
+      setFilterWork(data.slice(0, 4));  //data.slice(0, 4) to get 4 pages
 
     
     durations = staggerChildCustom(works.length);
@@ -115,26 +149,35 @@ const Work = () => {
                   transition={{ duration: 0.25, ease: 'easeInOut'}}
                   className='app__work-hover app__flex'
                   >
-                    <a href={work.projectLink} target="_blank" rel="norefferer">
-                      <motion.div
-                        whileInView={{scale: [0,1]}}
-                        whileHover={{ scale: [1,0.9]}}
-                        transition={{ duration: 0.25}}
-                        className='app__flex'
-                        >
-                          <AiFillEye />
-                        </motion.div>
-                      </a>
-                      <a href={work.codeLink} target="_blank" rel="norefferer">
-                      <motion.div
-                        whileInView={{scale: [0,1]}}
-                        whileHover={{ scale: [1,0.9]}}
-                        transition={{ duration: 0.25}}
-                        className='app__flex'
-                        >
-                          <AiFillGithub />
-                        </motion.div>
-                      </a>
+                    {
+                      work.projectLink ? (
+                        <a href={work.projectLink} target="_blank" rel="norefferer">
+                        <motion.div
+                          whileInView={{scale: [0,1]}}
+                          whileHover={{ scale: [1,0.9]}}
+                          transition={{ duration: 0.25}}
+                          className='app__flex'
+                          >
+                            
+                            <AiFillEye />
+                          </motion.div>
+                        </a>
+                      ) : ''
+                    }
+                    {
+                    work.codeLink ? (
+                        <a href={work.codeLink} target="_blank" rel="norefferer">
+                        <motion.div
+                          whileInView={{scale: [0,1]}}
+                          whileHover={{ scale: [1,0.9]}}
+                          transition={{ duration: 0.25}}
+                          className='app__flex'
+                          >
+                            <AiFillGithub />
+                          </motion.div>
+                        </a>
+                      ) : ''
+                    }
                   </motion.div>
                 </div>
                 <div className='app__work-content app__flex'>
@@ -156,7 +199,9 @@ const Work = () => {
             ))}
             
           </motion.div>
+        
           <div className="app__work-pagination app__flex">
+                  
             {/* Incase we have more that 4 works then add pagination */}
             {(Math.ceil(works.length / 4) > 1) && page > 1 &&  (
               <motion.div

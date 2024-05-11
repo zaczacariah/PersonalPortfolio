@@ -11,14 +11,14 @@ const About = () => {
 
   const entries = [
     {
-      title: 'Standard Operating Procedure',
-      head: 'Automation',
-      subtitles: ['Intelligent.', 'Fast.', 'Common Sense.'],
+      title: 'Full Stack Developer',
+      head: 'MERN/NoSQL/SQL',
+      // subtitles: ['Intelligent.', 'Fast.', 'Common Sense.'],
     },
     {
-      title: 'Really Bloody Good Design',
-      head: 'UI/UX',
-      subtitles: ['Efficient.', 'Streamlined.', 'Automated.'],
+      title: 'Web Developer',
+      head: 'MERN/NoSQL/SQL',
+      // subtitles: ['Efficient.', 'Streamlined.', 'Automated.'],
     },
     // Add more entries as needed
   ];

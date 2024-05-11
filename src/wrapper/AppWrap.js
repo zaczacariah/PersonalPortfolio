@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationDots, SocialMedia } from '../components';
 import './AppWrap.scss';
 
-const AppWrap = (Component, idName, classNames) => function HOC() {
+const AppWrap = (Component, idName, classNames, singlepage=false) => function HOC() {
   
   return (
     <div id={idName} className={`app__container ${classNames === undefined ?  '' : classNames}`}>
@@ -16,7 +16,9 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
                 <p className='p-text'>All rights reserved</p>
             </div>
         </div>
+        { singlepage ? '' : (
         <NavigationDots active={idName} />
+        ) }
     </div>
   )
 }

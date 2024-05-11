@@ -16,7 +16,7 @@
 
 html {
   scroll-snap-type: y mandatory;
-
+  font-family: var(--font-base); 
   /* @media screen and (max-width:450px){
     scroll-snap-type: none;
   } */

@@ -22,12 +22,16 @@ const Header = () => {
             
         </div>
         <ul className='app__navbar-links'>
-            {['home', 'skills', 'work', 'testimonials', 'contact'].map((item) => (
+            {['home', 'skills', 'work'].map((item) => (
                 <li className="app__flex p-text" key={`link-${item}`}>
                     <div />
-                    <a href={`#${item}`} className="">{item}</a>
+                    <a href={`/#${item}`} className="">{item}</a>
                 </li>
             ))}
+            <li className="app__flex p-text">
+                    <div />
+                    <a href={`/contact`} className="">Contact</a>
+                </li>
         </ul>
 
         <div className="app__navbar-menu">
