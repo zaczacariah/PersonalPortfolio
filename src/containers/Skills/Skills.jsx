@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './Skills.scss';
 import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
-import images from '../../constants/images'
+//import images variable from constants
+import { images } from '../../constants';
 
 
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
 
-  const [animateCard, setAnimateCard] = useState({y:0, opacity: 1});
+  const [animateCard] = useState({y:0, opacity: 1});
   
   useEffect(() => {
    const data = [

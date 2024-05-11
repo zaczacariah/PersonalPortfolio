@@ -8,7 +8,7 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 
 const Work = () => {
 
-  const [animateCard, setAnimateCard] = useState({y:0, opacity: 1});
+  const [animateCard] = useState({y:0, opacity: 1});
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [page, setPage] = useState(1);
@@ -94,21 +94,12 @@ const Work = () => {
       setFilterWork(data.slice(0, 4));  //data.slice(0, 4) to get 4 pages
 
     
-    durations = staggerChildCustom(works.length);
+    
 
   }, []);
 
  
   // Staggering the child items of work by calculating the duration of each item
-  function staggerChildCustom(numElements) {
-    
-    let increment = (4 - 0.5) / (numElements - 1);
-    works.map((index) => {
-      durations.push(0.5 + (index * increment));
-    });
-    
-    return durations;
-  }
 
 
   return (
@@ -151,7 +142,7 @@ const Work = () => {
                   >
                     {
                       work.projectLink ? (
-                        <a href={work.projectLink} target="_blank" rel="norefferer">
+                        <a href={work.projectLink} rel="norefferer">
                         <motion.div
                           whileInView={{scale: [0,1]}}
                           whileHover={{ scale: [1,0.9]}}
@@ -166,7 +157,7 @@ const Work = () => {
                     }
                     {
                     work.codeLink ? (
-                        <a href={work.codeLink} target="_blank" rel="norefferer">
+                        <a href={work.codeLink} rel="norefferer">
                         <motion.div
                           whileInView={{scale: [0,1]}}
                           whileHover={{ scale: [1,0.9]}}

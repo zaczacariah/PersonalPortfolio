@@ -17,7 +17,7 @@ import mysql from '../assets/skills/mysql.png'
 import adobe from '../assets/skills/adobe.png'
 
 
-export default {
+ const images = {
     logo_trans,
     logo_circle,
     logo_trans_small,
@@ -36,3 +36,5 @@ export default {
     mysql,
     adobe
 };
+
+export default images;
